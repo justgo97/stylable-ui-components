@@ -6,6 +6,8 @@
 export default {
   clearMocks: true,
 
+  testEnvironment: "jest-environment-jsdom",
+
   collectCoverage: true,
 
   coverageDirectory: "coverage",

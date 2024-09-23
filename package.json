@@ -1,7 +1,7 @@
 {
   "name": "stylable-components",
   "version": "0.0.1",
-  "description": "",
+  "description": "A CSS-in-JS solution for building stylable components",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "module": "dist/index.mjs",
@@ -31,7 +31,11 @@
   "keywords": [
     "stylable",
     "components",
-    "react"
+    "css-in-js",
+    "react",
+    "styled-components",
+    "emotion",
+    "typescript"
   ],
   "author": "Hamdi Maraoui",
   "license": "MIT",
@@ -47,6 +51,7 @@
     "@types/react": "^18.3.7",
     "@vitejs/plugin-react": "^4.3.1",
     "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.7.0",
     "react-dom": "^18.3.1",
     "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",

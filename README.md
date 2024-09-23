@@ -1,6 +1,8 @@
 # stylable-components
 
-todo.. unfinished.
+⚠️ **Unfinished: Work in Progress**
+
+A CSS-in-JS solution for building stylable components
 
 # Installation
 
