@@ -1,5 +1,5 @@
 {
-  "name": "stylable-components",
+  "name": "stylable-ui-components",
   "version": "0.0.2",
   "description": "A CSS-in-JS solution for building stylable components",
   "main": "dist/index.js",
