@@ -1,12 +1,12 @@
-# stylable-components
+# stylable-ui-components
 
 ⚠️ **Unfinished: Work in Progress**
 
-A CSS-in-JS solution for building stylable components
+A CSS-in-JS solution for building stylable components in React.
 
 # Installation
 
-`npm install ..`
+`npm install stylable-ui-components @emotion/styled`
 
 # Usage
 

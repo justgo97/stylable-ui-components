@@ -1,7 +1,7 @@
 {
   "name": "stylable-ui-components",
   "version": "0.0.3",
-  "description": "A CSS-in-JS solution for building stylable components",
+  "description": "A CSS-in-JS solution for building stylable components in React",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "module": "dist/index.mjs",
