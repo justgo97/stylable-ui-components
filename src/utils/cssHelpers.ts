@@ -17,15 +17,10 @@ const generateCssLine = (key: string, value: any): string => {
 // Convert custom props into standard CSS properties
 const resolveCustomProps = (
   key: string,
-  value: any,
   customCSSProps: Record<string, string | string[]>
 ) => {
   const customProp = customCSSProps[key];
-  return customProp
-    ? Array.isArray(customProp)
-      ? customProp.map((prop) => [prop, value])
-      : [[customProp, value]]
-    : [[key, value]];
+  return Array.isArray(customProp) ? customProp : [customProp || key];
 };
 
 const validCssProperties = (() => {

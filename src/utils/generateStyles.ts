@@ -35,15 +35,15 @@ const generateStyles = (
   for (const [key, value] of Object.entries(props)) {
     if (value === undefined) continue;
 
-    if (pseudoHandlers[key]) {
-      pseudoStyles.push(pseudoHandlers[key](value, props));
-      continue;
-    }
-
-    const resolvedProps = resolveCustomProps(key, value, cssShorthandProps);
-    for (const [resolvedKey, resolvedValue] of resolvedProps) {
-      if (filterValid && !validCssProperties.includes(resolvedKey)) continue;
-      styles.push(generateCssLine(resolvedKey, resolvedValue));
+    if (key in pseudoHandlers) {
+      pseudoStyles.push(pseudoHandlers[key]!(value, props));
+    } else {
+      const resolvedProps = resolveCustomProps(key, cssShorthandProps);
+      for (const resolvedKey of resolvedProps) {
+        if (!filterValid || validCssProperties.includes(resolvedKey)) {
+          styles.push(generateCssLine(resolvedKey, value));
+        }
+      }
     }
   }
 
