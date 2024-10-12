@@ -1,6 +1,6 @@
 import { SCFactory } from "./utils/SCFactory";
-import { createComponent } from "./utils/createComponent";
+import { createSC } from "./utils/createSC";
 
 export * from "./DefaultComponents";
 
-export { createComponent, SCFactory as SC };
+export { createSC, SCFactory as SC };

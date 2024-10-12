@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 
-import { SC, createComponent } from "../../src/index";
+import { SC, createSC } from "../../src/index";
 
-const Box = createComponent("div");
+const Box = createSC("div");
 
 const App = () => {
   const refBox = useRef(null);

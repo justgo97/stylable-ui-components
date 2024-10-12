@@ -1,6 +1,6 @@
 import { ComponentType } from "react";
 import { BaseComponentProps } from "./styleTypes";
-import { createComponent } from "./createComponent";
+import { createSC } from "./createSC";
 
 // Cache for storing created components
 const cache = new Map<string, any>();
@@ -13,13 +13,13 @@ type StyledProxy = {
 };
 
 // Create a proxy for dynamic styled components
-const SCFactory = new Proxy(createComponent as unknown as StyledProxy, {
+const SCFactory = new Proxy(createSC as unknown as StyledProxy, {
   get(_, tag: keyof React.JSX.IntrinsicElements) {
     if (cache.has(tag)) {
       return cache.get(tag);
     }
 
-    const styledComponent = createComponent(tag);
+    const styledComponent = createSC(tag);
 
     cache.set(tag, styledComponent);
 
