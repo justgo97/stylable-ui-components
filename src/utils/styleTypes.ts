@@ -56,6 +56,7 @@ type SCProps = AllCssProps & PseudoProps & BreakpointsProps;
 interface PseudoProps {
   _hover?: SCProps;
   _selected?: SCProps;
+  _disabled?: SCProps;
   _custom?: { condition: string; style: SCProps };
 }
 
