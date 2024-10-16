@@ -12,6 +12,10 @@ const pseudoHandlers: Record<string, (value: any, props?: any) => string> = {
   _hover: (value) => `&:hover { ${generateStyles(value)} }`,
   _selected: (value) =>
     `&:is([aria-selected=true], [data-selected]) { ${generateStyles(value)} }`,
+  _disabled: (value) =>
+    `&:is(:disabled, [disabled], [data-disabled], [aria-disabled=true]) { ${generateStyles(
+      value
+    )} }`,
   _custom: (value) => `${value.condition} { ${generateStyles(value.style)} }`,
 
   // Breakpoints
