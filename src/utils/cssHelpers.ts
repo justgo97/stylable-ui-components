@@ -4,7 +4,8 @@ const toKebabCase = (prop: string) => {
 };
 
 // A list of tokens of css props that can use pixel value
-const pixelProps = /width|height|margin|padding|size|gap|basis|position/i;
+const pixelProps =
+  /width|height|margin|padding|size|gap|basis|position|radius/i;
 
 // Generate CSS for a single property
 const generateCssLine = (key: string, value: any): string => {
