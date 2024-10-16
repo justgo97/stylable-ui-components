@@ -1,5 +1,7 @@
 # Stylable UI Components
 
+[![build](https://github.com/justgo97/stylable-ui-components/actions/workflows/release_package.yml/badge.svg)](https://github.com/justgo97/stylable-ui-components/actions) [![img](https://img.shields.io/npm/v/stylable-ui-components.svg)](https://www.npmjs.com/package/stylable-ui-components) [![img](https://img.shields.io/npm/dt/stylable-ui-components.svg)](https://www.npmjs.com/package/stylable-ui-components) [![img](https://img.shields.io/npm/l/stylable-ui-components.svg)](https://github.com/justgo97/stylable-ui-components/blob/main/LICENSE)
+
 A CSS-in-JS library for building customizable and responsive UI components in React using props for styling, It allows for the easy creation of styled components with support for shorthand properties, breakpoints, and pseudo-classes.
 
 ## Features
