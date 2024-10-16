@@ -18,17 +18,14 @@ const App = () => {
       </div>
       <SC.div
         ref={refBox}
-        data-prop="tes"
-        data-new={null}
-        data-up={1}
-        data-down={undefined}
-        data-left={""}
-        data-right=""
+        data-prop="test"
         color="blue"
         backgroundColor="red"
-        bgColor="red"
+        bgColor="green"
         _hover={{ bgColor: "beige" }}
         _custom={{ condition: "&:hover", style: { bgColor: "darkblue" } }}
+        _selected={{ bgColor: "brown" }}
+        data-selected
       >
         another
       </SC.div>

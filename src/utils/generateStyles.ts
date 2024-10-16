@@ -10,8 +10,8 @@ import { cssShorthandProps } from "./cssShorthandProps";
 const pseudoHandlers: Record<string, (value: any, props?: any) => string> = {
   // Pseudo-props
   _hover: (value) => `&:hover { ${generateStyles(value)} }`,
-  _selected: (value, props) =>
-    props.isSelected ? `${generateStyles(value)}` : "",
+  _selected: (value) =>
+    `&:is([aria-selected=true], [data-selected]) { ${generateStyles(value)} }`,
   _custom: (value) => `${value.condition} { ${generateStyles(value.style)} }`,
 
   // Breakpoints

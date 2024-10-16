@@ -68,8 +68,6 @@ interface BreakpointsProps {
   _xxl?: SCProps;
 }
 
-interface BaseComponentProps extends SCProps {
-  isSelected?: boolean;
-}
+interface BaseComponentProps extends SCProps {}
 
 export type { BaseComponentProps };
