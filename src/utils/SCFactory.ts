@@ -1,14 +1,16 @@
-import { ComponentType } from "react";
 import { BaseComponentProps } from "./styleTypes";
 import { createSC } from "./createSC";
+import { StyledComponent } from "@emotion/styled";
+import { Theme } from "@emotion/react";
 
 // Cache for storing created components
 const cache = new Map<string, any>();
 
-// Extend the proxy type to include intrinsic element names and custom components
+// Extend the proxy type to include intrinsic element names
 type StyledProxy = {
-  [Tag in keyof React.JSX.IntrinsicElements]: ComponentType<
-    React.ComponentProps<Tag> & BaseComponentProps
+  [Tag in keyof React.JSX.IntrinsicElements]: StyledComponent<
+    { theme?: Theme; as?: React.ElementType } & BaseComponentProps,
+    React.ComponentProps<Tag>
   >;
 };
 

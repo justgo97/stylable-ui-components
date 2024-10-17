@@ -17,15 +17,16 @@ const App = () => {
         ))}
       </div>
       <SC.div
+        as={"section"}
         ref={refBox}
         data-prop="test"
         color="blue"
         backgroundColor="red"
         bgColor="green"
         _hover={{ bgColor: "beige" }}
-        _custom={{ condition: "&:hover", style: { bgColor: "darkblue" } }}
         _selected={{ bgColor: "brown" }}
         data-selected
+        _custom={{ condition: "&:hover", style: { bgColor: "darkblue" } }}
       >
         another
       </SC.div>
@@ -34,7 +35,11 @@ const App = () => {
 };
 
 const DemoItem = ({ boxNumber }: { boxNumber: string }) => {
-  return <Box bgColor="beige">Box #{boxNumber}</Box>;
+  return (
+    <Box as={"h3"} bgColor="beige">
+      Box #{boxNumber}
+    </Box>
+  );
 };
 
 export default App;
