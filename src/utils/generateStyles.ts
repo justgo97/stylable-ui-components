@@ -9,6 +9,9 @@ import { cssShorthandProps } from "./cssShorthandProps";
 // Combine pseudo-prop and breakpoint logic map in one step
 const pseudoHandlers: Record<string, (value: any, props?: any) => string> = {
   // Pseudo-props
+  _active: (value) =>
+    `&:is(:active, [data-active]) { ${generateStyles(value)} }`,
+  _activeLink: (value) => `&[aria-current=page] { ${generateStyles(value)} }`,
   _hover: (value) => `&:hover { ${generateStyles(value)} }`,
   _selected: (value) =>
     `&:is([aria-selected=true], [data-selected]) { ${generateStyles(value)} }`,

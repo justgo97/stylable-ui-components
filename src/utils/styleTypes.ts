@@ -54,6 +54,8 @@ type AllCssProps = CSSProperties &
 type SCProps = AllCssProps & PseudoProps & BreakpointsProps;
 
 interface PseudoProps {
+  _active?: SCProps;
+  _activeLink?: SCProps;
   _hover?: SCProps;
   _selected?: SCProps;
   _disabled?: SCProps;
